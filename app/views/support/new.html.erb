@@ -1,0 +1,12 @@
+<h1>Support</h1>
+
+<%= form_tag supports_path do %>
+Convert to:
+  <%= radio_button_tag(:corf, "celsius") %>
+  <%= label_tag(:corf_celsius, "Celsius") %>
+  <%= radio_button_tag(:corf, "farenheit") %>
+  <%= label_tag(:corf_farenheit, "Farenheit") %>
+
+  <%= text_field_tag :temp, nil, {placeholder: "e.g. 25", :class => "textbox"} %></div>
+  <%= submit_tag "Convert" %>
+<% end %>
