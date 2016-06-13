@@ -27,7 +27,7 @@ class RequestsController < ApplicationController
   end
 
   def index
-    @requests = Request.paginate(:page => params[:page], :per_page => 7)
+    @requests = Request.order(created_at: :ASC).paginate(:page => params[:page], :per_page => 7)
   end
 
   def edit
